@@ -5,6 +5,22 @@ html, body {
     
 }
 
+.main {
+     display: flex;
+     justify-content: center;
+}
+
+.main h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 5px;
+    font-size: 40px;
+    margin: 0;
+    padding-top: 20px;
+    font-weight: 800;
+    color: pink;
+    animation: jump 5s infinite;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -47,4 +63,10 @@ span {
         filter: blur(6px);
     }
 
+}
+
+@keyframes jump {
+    20%{
+        transform: translateY(40px);
+    }
 }
