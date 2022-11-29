@@ -1,0 +1,50 @@
+html, body {
+    margin: 0;
+    height: 90vh;
+    background-color: #323232;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container p {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 46px;
+    color: white;
+    max-width: 900px;
+    transform: rotate(1deg);
+    animation: rotate 5s infinite;
+}
+
+span {
+    opacity: 0;
+    animation: opacity 5s infinite;
+    animation-delay: calc(var(--i) * .3s);
+    filter: blur(4px);
+}
+
+
+@keyframes rotate {
+   100%{
+        transform: rotateX(-5deg) rotateY(-10deg) rotateZ(-5deg);
+    }
+}
+
+@keyframes opacity {
+    50% {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    80% {
+        opacity: 0;
+        filter: blur(6px);
+    }
+
+}
